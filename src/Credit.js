@@ -9,7 +9,7 @@ export default function Credit() {
           id="github"
           target="_blank"
           rel="noreferrer"
-          href="https://github.com/alufix/vanilla-weather-app"
+          href="https://github.com/alufix/react-weather-app"
         >
           Anna-Louise Blewden
         </a>
