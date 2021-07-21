@@ -1,16 +1,19 @@
-import React from "react"; 
-import axios from "axios";  
+import React from "react";
 
-export default function Weather(props) {
-    function handleResponse(response) {
-        alert(`The weather in ${props.city} is ${response.data.main.temp}°C`)
-    }
-    let apiKey = "df0e4203de8f0cf1987569b54e21756c";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.city}&units=metric&appid=${apiKey}`;
-    
-    axios.get(apiUrl).then(handleResponse);
+import Today from "./Today";
+import Search from "./Search";
+import Forecast from "./Forecast";
+import Credit from "./Credit";
 
-    return (
-        <h2>Hello from Weather</h2>
-    );
+export default function Weather() {
+  return (
+    <div className="Weather">
+      <div className="weather-app shadow p-3 mb-5 bg-body rounded" id="app-bg">
+        <Search />
+        <Today />
+        <Forecast />
+        <Credit />
+      </div>
+    </div>
+  );
 }

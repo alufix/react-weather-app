@@ -14,12 +14,16 @@ export default function Today() {
       <ul>
         <div className="row">
           <div className="col-12">
-            <li id="today-time">Last updated - Mon 16:44</li>
+            <ul>
+                <li id="today-time">Last updated - Mon 16:44</li>
+            </ul>          
           </div>
         </div>
         <div className="row today">
           <div className="col-5">
-            <li id="description">sunny</li>
+            <ul>
+                <li id="description">sunny</li>
+            </ul>
           </div>
 
           <div className="col-2">
@@ -33,19 +37,21 @@ export default function Today() {
 
           <div className="col-4">
             <div className="weather-temperature">
-              <li>
-                <span id="temp-today">19</span>
-                <span id="degrees">°</span>
-                <span id="degrees-units">
-                  <a href="www.google.com" id="celsius-link" className="active">
-                    C
-                  </a>{" "}
-                  |
-                  <a href="www.google.com" id="fahrenheit-link">
-                    F
-                  </a>
-                </span>
-              </li>
+              <ul>
+                <li>
+                    <span id="temp-today">19</span>
+                    <span id="degrees">°</span>
+                    <span id="degrees-units">
+                    <a href="www.google.com" id="celsius-link" className="active">
+                        C
+                    </a>{" "}
+                    |
+                    <a href="www.google.com" id="fahrenheit-link">
+                        F
+                    </a>
+                    </span>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
