@@ -1,3 +1,26 @@
+#search-bar {
+  width: 200px;
+  margin: 10px 0 20px 30px;
+  opacity: 70%;
+}
+
+#submit-button {
+  margin: 10px 0 20px 0;
+  height: 30px;
+  font-size: 14px;
+  line-height: 14px;
+}
+
+#current-location-button {
+  width: 80px;
+  height: 30px;
+  font-size: 14px;
+  line-height: 14px;
+  position: relative;
+  top: 10px;
+  right: 35px;
+}
+
 .city {
   text-transform: uppercase;
   /*note: 'capitalize' makes the first letter upper case, i.e. sentence case */
@@ -67,4 +90,49 @@ a {
 
 .weather-temperature .active:hover {
   text-decoration: none;
+}
+
+.future-days {
+  padding: 5px;
+  position: relative;
+  top: -10px;
+}
+
+.forecast-date {
+  text-align: right;
+  position: relative;
+  right: -13px;
+}
+
+.forecast-emoji {
+  position: relative;
+  top: -5px;
+  left: -10px;
+}
+
+.forecast-temp {
+  text-align: center;
+  position: relative;
+  left: -10px;
+}
+
+.temp-low {
+  opacity: 0.6;
+}
+
+#credit {
+  color: black;
+  font-family: monospace;
+  font-size: 14px;
+  opacity: 0.8;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  top: 15px;
+}
+
+#github:hover {
+  opacity: 1;
+  color: rgb(253, 103, 160);
+  transition: all 200ms ease-in-out;
 }
