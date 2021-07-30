@@ -1,4 +1,5 @@
 import React from "react";
+import './forecast.css';
 
 export default function Forecast() {
   return (
@@ -7,14 +8,14 @@ export default function Forecast() {
         <ul>
           <div id="day2">
             <div className="row">
-              <div className="col-6">
+              <div className="col-4">
                 <ul>
                     <li className="forecast-date" id="day2-date">
                         Tuesday:
                     </li>
                 </ul>
               </div>
-              <div className="col-1">
+              <div className="col-2">
                 <ul>
                     <li className="forecast-emoji" id="day2-emoji">
                         <img
@@ -29,7 +30,7 @@ export default function Forecast() {
               <div className="col-4">
                 <ul>
                     <li className="forecast-temp" id="day2-temp">
-                        24° <span className="temp-low">14°</span>
+                        24° <span className="temp-low">(14°)</span>
                     </li>
                 </ul>
               </div>

@@ -1,0 +1,16 @@
+#credit {
+  color: black;
+  font-family: monospace;
+  font-size: 14px;
+  opacity: 0.8;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  top: 15px;
+}
+
+#github:hover {
+  opacity: 1;
+  color: rgb(253, 103, 160);
+  transition: all 200ms ease-in-out;
+}

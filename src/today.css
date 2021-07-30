@@ -1,42 +1,3 @@
-h2 {
-  font-size: 18px;
-}
-
-.weather-app {
-  text-align: center;
-  /*background-image: url("../assets/thunderstorm.png");*/
-  margin: 0 auto;
-  padding: 20px;
-  width: 450px;
-  height: 570px;
-  border: solid; /*0.5rem;*/
-  /*color: white;*/
-  font-family: "Nunito Sans", sans-serif;
-}
-
-#search-bar {
-  width: 200px;
-  margin: 10px 0 20px 30px;
-  opacity: 70%;
-}
-
-#submit-button {
-  margin: 10px 0 20px 0;
-  height: 30px;
-  font-size: 14px;
-  line-height: 14px;
-}
-
-#current-location-button {
-  width: 80px;
-  height: 30px;
-  font-size: 14px;
-  line-height: 14px;
-  position: relative;
-  top: 10px;
-  right: 35px;
-}
-
 .city {
   text-transform: uppercase;
   /*note: 'capitalize' makes the first letter upper case, i.e. sentence case */
@@ -66,13 +27,16 @@ a {
 }
 
 #today-time {
-  margin: 20px 20px 0px 40px;
+  margin: 20px 20px 0px -20px;
   font-size: 14px;
   text-align: left;
 }
 
 .today {
-  padding: 15px 20px 15px 20px;
+  padding: 15px 20px 15px 0px;
+  text-align: left;
+  position: relative;
+  left: -10px;
 }
 
 #description {
@@ -83,7 +47,7 @@ a {
 
 .weather-temperature {
   position: relative;
-  left: -5px;
+  left: -15px;
 }
 
 #temp-today,
@@ -103,23 +67,4 @@ a {
 
 .weather-temperature .active:hover {
   text-decoration: none;
-}
-
-.future-days {
-  padding: 5px;
-  position: relative;
-  top: -10px;
-  left: 5px;
-}
-
-.forecast-date {
-  text-align: right;
-}
-
-.forecast-temp {
-  text-align: center;
-}
-
-.temp-low {
-  opacity: 0.6;
 }
