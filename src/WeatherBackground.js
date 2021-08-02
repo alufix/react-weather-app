@@ -37,5 +37,5 @@ export default function WeatherBackground(props) {
 
         // //-------------------- end conditional background --------------------
 return ( 
-<div> <img src="" /></div>);
+<div> <img src="" alt="" /></div>);
     }
