@@ -15,12 +15,13 @@ export default function Weather(props) {
       city: response.data.name, 
       temperature: response.data.main.temp, 
       description: response.data.weather[0].main,
+      icon: response.data.weather[0].icon,
       iconUrl: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     }); 
   }
 
   function search() {
-    const apiKey = "4bf607af66f424ce009f3ab41fd57579"; 
+    const apiKey = "df0e4203de8f0cf1987569b54e21756c"; 
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
     axios.get(apiUrl).then(handleResponse);
   }

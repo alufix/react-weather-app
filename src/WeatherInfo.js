@@ -1,10 +1,14 @@
 import React from "react"; 
 import FormattedDate from "./FormattedDate";
+import WeatherBackground from "./WeatherBackground"; 
+import WeatherTemperature from "./WeatherTemperature";
 
 export default function WeatherInfo(props) {
     return (
     
+
     <div className="WeatherInfo">
+      <WeatherBackground code={props.data.icon} desc={props.data.description} />
         <div className="Today">
         <div className="row justify-content-center text-center">
           <div className="mx-auto" styles="border: none">
@@ -41,23 +45,7 @@ export default function WeatherInfo(props) {
             </div>
 
             <div className="col-4">
-              <div className="weather-temperature">
-                <ul>
-                  <li>
-                      <span id="temp-today">{Math.round(props.data.temperature)}</span>
-                      <span id="degrees">°</span>
-                      <span id="degrees-units">
-                      <a href="www.google.com" id="celsius-link" className="active">
-                          C
-                      </a>{" "}
-                      |{" "}
-                      <a href="www.google.com" id="fahrenheit-link">
-                          F
-                      </a>
-                      </span>
-                  </li>
-                </ul>
-              </div>
+                <WeatherTemperature celsius={props.data.temperature} />
             </div>
           </div>
         </ul>
