@@ -4,16 +4,21 @@ import axios from 'axios';
 import Credit from "./Credit";
 import "./weather.css"; 
 
-export default function Weather() {
-  const [ready, setReady] = useState(false); 
-  const [temperature, setTemperature] = useState(null); 
+export default function Weather(props) { 
+  const [weatherData, setWeatherData] = useState({ready: false}); 
   function handleResponse(response) {
     console.log(response.data);
-    setTemperature(response.data.main.temp); 
-    setReady(true);
+    setWeatherData({
+      ready: true,
+      date: "Friday 16:44",
+      city: response.data.name, 
+      temperature: response.data.main.temp, 
+      description: response.data.weather[0].main,
+      iconUrl: `https://openweathermap.org/img/wn/01d@2x.png`
+    }); 
   }
 
-if (ready) {
+if (weatherData.ready) {
   return (
       <div className="Weather">
         <div className="weather-app shadow p-3 mb-5 bg-body rounded" id="app-bg">
@@ -59,7 +64,7 @@ if (ready) {
         <div className="row justify-content-center text-center">
           <div className="mx-auto" styles="border: none">
             <h1 className="city" id="city-name">
-              Tokyo
+              {weatherData.city}
             </h1>
           </div>
         </div>
@@ -68,21 +73,21 @@ if (ready) {
           <div className="row">
             <div className="col-12">
               <ul>
-                  <li id="today-time">Last updated - Mon 16:44</li>
+                  <li id="today-time">Last updated - {weatherData.date}</li>
               </ul>          
             </div>
           </div>
           <div className="row today">
             <div className="col-5">
               <ul>
-                  <li id="description">sunny</li>
+                  <li id="description">{weatherData.description}</li>
               </ul>
             </div>
 
             <div className="col-2">
               <img
-                src="https://openweathermap.org/img/wn/01d@2x.png"
-                alt="..."
+                src={weatherData.iconUrl}
+                alt={weatherData.description} 
                 id="emoji"
                 width="50px"
               />
@@ -92,7 +97,7 @@ if (ready) {
               <div className="weather-temperature">
                 <ul>
                   <li>
-                      <span id="temp-today">{Math.round(temperature)}</span>
+                      <span id="temp-today">{Math.round(weatherData.temperature)}</span>
                       <span id="degrees">°</span>
                       <span id="degrees-units">
                       <a href="www.google.com" id="celsius-link" className="active">
@@ -153,8 +158,7 @@ if (ready) {
     );
   } else {
     const apiKey = "df0e4203de8f0cf1987569b54e21756c"; 
-    let city = "Tokyo"; 
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&units=metric&appid=${apiKey}`;
     axios.get(apiUrl).then(handleResponse);
 
     return "Loading..."; 
