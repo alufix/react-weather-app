@@ -56,14 +56,14 @@ export default function WeatherInfo(props) {
           <ul>
             <div id="day2">
               <div className="row">
-                <div className="col-4">
+                <div className="col-5">
                   <ul>
                       <li className="forecast-date" id="day2-date">
                           Tuesday:
                       </li>
                   </ul>
                 </div>
-                <div className="col-2">
+                <div className="col-1">
                   <ul>
                       <li className="forecast-emoji" id="day2-emoji">
                           <img
