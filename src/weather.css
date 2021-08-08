@@ -66,8 +66,7 @@ a {
 }
 
 .weather-temperature {
-  position: relative;
-  left: -5px;
+  margin-left: -5px;
 }
 
 #temp-today,
@@ -78,6 +77,7 @@ a {
 #degrees-units {
   font-size: 12px;
   vertical-align: middle;
+  margin-left: 3px;
 }
 
 .weather-temperature .active {
@@ -87,29 +87,4 @@ a {
 
 .weather-temperature .active:hover {
   text-decoration: none;
-}
-
-.future-days {
-  padding: 5px;
-  position: relative;
-  top: -10px;
-  left: 5px;
-}
-
-.forecast-date {
-  text-align: right;
-}
-
-.forecast-emoji {
-  position: relative;
-  top: -5px;
-  left: -3px;
-}
-
-.forecast-temp {
-  text-align: center;
-}
-
-.temp-low {
-  opacity: 0.6;
 }
