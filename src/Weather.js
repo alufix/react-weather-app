@@ -81,7 +81,7 @@ if (weatherData.ready) {
         </form>
     </div>
     <WeatherInfo data={weatherData} />
-    <WeatherForecast coordinates={weatherData.coordinates} code={weatherData.icon} /> 
+    <WeatherForecast data={weatherData} coordinates={weatherData.coordinates} code={weatherData.icon} /> 
     <Credit />
   </div>
   </div>
