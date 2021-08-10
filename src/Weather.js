@@ -19,7 +19,6 @@ export default function Weather(props) {
       temperature: response.data.main.temp, 
       description: response.data.weather[0].main,
       icon: response.data.weather[0].icon,
-      iconUrl: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     }); 
   }
 
@@ -81,7 +80,7 @@ if (weatherData.ready) {
         </form>
     </div>
     <WeatherInfo data={weatherData} />
-    <WeatherForecast data={weatherData} coordinates={weatherData.coordinates} code={weatherData.icon} /> 
+    <WeatherForecast data={weatherData} coordinates={weatherData.coordinates} /> 
     <Credit />
   </div>
   </div>
