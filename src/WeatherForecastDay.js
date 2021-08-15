@@ -13,14 +13,14 @@ export default function WeatherForecastDay(props) {
     }
 
     function day() {
-        let date = new Date(props.data.dt * 100);
+        let date = new Date(props.data.dt * 1000);
         let day = date.getDay();
         let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
         return days[day];
     }
 
     return (
-        <div className="row">
+        <div className="row WeatherForecast">
             <div className="col-5">
                 <ul>
                     <li className="forecast-date">
@@ -31,7 +31,7 @@ export default function WeatherForecastDay(props) {
             <div className="col-1">
                 <ul>
                     <li className="forecast-emoji">
-                        <WeatherIcon code={props.data.weather[0].icon} size={28} />
+                        <WeatherIcon code={props.data.weather[0].icon} size={45} />
                     </li>
                 </ul>
             </div>

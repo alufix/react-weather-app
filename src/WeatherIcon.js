@@ -29,7 +29,7 @@ export default function WeatherIcon(props) {
             src= {iconUrl}
             alt="..." 
             className="forecast-emoji" 
-            width="45px"
+            width={props.size}
              />
     );
 }

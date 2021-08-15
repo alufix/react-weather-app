@@ -6,8 +6,7 @@ import axios from 'axios';
 import "./weather.css"; 
 
 export default function Weather(props) { 
-
-  const [weatherData, setWeatherData] = useState({ready: false});  
+  const [weatherData, setWeatherData] = useState({ ready: false });  
   const [city, setCity] = useState(props.defaultCity);
  
   function handleResponse(response) {
@@ -42,22 +41,21 @@ export default function Weather(props) {
 if (weatherData.ready) {
   return (
   <div className="Weather">
-  <div className="weather-app shadow p-3 mb-5 bg-body rounded" id="app-bg">
-    
-    <div className="Search">
+    <div className="weather-app shadow p-3 mb-5 bg-body rounded" id="app-bg">
+      <div className="Search">
         <form id="city-search-form" onSubmit={handleSubmit}>
           <div className="row">
-            <div className="col-6">
+            <div className="col-8">
               <input
                 id="search-bar"
-                type="text"
+                type="search"
                 placeholder="Type a city..."
-                autoFocus
+                autoFocus="on"
                 autoComplete="off"
                 onChange={handleCityChange}
               />
             </div>
-            <div className="col-3">
+            <div className="col-2">
               <input
                 id="submit-button"
                 type="submit"
@@ -65,22 +63,11 @@ if (weatherData.ready) {
                 value="🔎"
               />
             </div>
-            <div className="col-3">
-              <button
-                type="button"
-                className="btn btn-outline-secondary"
-                id="current-location-button"
-              >
-                <span role="img" aria-label="current">
-                  📍
-                </span>
-              </button>
-            </div>
           </div>
         </form>
     </div>
     <WeatherInfo data={weatherData} />
-    <WeatherForecast data={weatherData} coordinates={weatherData.coordinates} /> 
+    <WeatherForecast coordinates={weatherData.coordinates} /> 
     <Credit />
   </div>
   </div>

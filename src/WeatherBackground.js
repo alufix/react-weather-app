@@ -4,6 +4,7 @@ export default function WeatherBackground(props) {
 //to add: link asset files with icon, change background to show weather photo 
 //-------------------- conditional background --------------------
 
+
         // //to change background according to weather description: 
         //let imageDescription = props.desc; 
         //if (imageDescription == "Clear" || 
