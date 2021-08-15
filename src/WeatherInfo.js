@@ -1,6 +1,5 @@
 import React from "react"; 
 import FormattedDate from "./FormattedDate";
-import WeatherBackground from "./WeatherBackground"; 
 import WeatherTemperature from "./WeatherTemperature";
 import WeatherIcon from "./WeatherIcon"; 
 
@@ -25,9 +24,6 @@ export default function WeatherInfo(props) {
                     Last updated - <FormattedDate date={props.data.date} />
                     </li>
               </ul>          
-            </div>
-            <div className="col">
-              <WeatherBackground code={props.data.icon} desc={props.data.description} />
             </div>
           </div>
           <div className="row today">

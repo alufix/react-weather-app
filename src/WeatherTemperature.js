@@ -17,18 +17,18 @@ export default function WeatherTemperature(props) {
         return (
             <span className="WeatherTemperature">
                 <div className="weather-temperature">
-                            <ul>
-                    <li>
-                        <span id="temp-today">{Math.round(props.celsius)}</span>
-                        <span id="degrees">°</span>
-                        
-                        <span id="degrees-units">
-                        C{" "}|{" "}
-                        <a href="/" onClick={showFahrenheit} id="fahrenheit-link">
-                            F
-                        </a>
-                        </span>
-                    </li>
+                    <ul>
+                        <li>
+                            <span id="temp-today">{Math.round(props.celsius)}</span>
+                            <span id="degrees">°</span>
+                            
+                            <span id="degrees-units">
+                            C{" "}|{" "}
+                            <a href="/" onClick={showFahrenheit} id="fahrenheit-link">
+                                F
+                            </a>
+                            </span>
+                        </li>
                     </ul>
                 </div>
             </span>
@@ -39,16 +39,16 @@ export default function WeatherTemperature(props) {
         return (
             <span className="WeatherTemperature">
                 <div className="weather-temperature">
-                            <ul>
-                    <li>
-                        <span id="temp-today">{Math.round(fahrenheit)}</span>
-                        <span id="degrees">°</span>
-                        <span id="degrees-units">
-                        <a href="/" onClick={showCelsius} id="fahrenheit-link">
-                            C 
-                        </a>{" "}|{" "}F
-                        </span>
-                    </li>
+                    <ul>
+                        <li>
+                            <span id="temp-today">{Math.round(fahrenheit)}</span>
+                            <span id="degrees">°</span>
+                            <span id="degrees-units">
+                                <a href="/" onClick={showCelsius} id="fahrenheit-link">
+                                    C 
+                                </a>{" "}|{" "}F
+                            </span>
+                        </li>
                     </ul>
                 </div>
             </span>
