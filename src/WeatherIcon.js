@@ -30,6 +30,6 @@ export default function WeatherIcon(props) {
             alt="..." 
             className="forecast-emoji" 
             width={props.size}
-             />
+        />
     );
 }
